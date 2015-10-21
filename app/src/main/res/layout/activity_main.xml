@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.kirer.widget.tab.smart.SmartTabLayout
+        android:id="@+id/view_pager_tab"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/primary"
+        app:stl_defaultTabTextColor="@color/icons"
+        app:stl_defaultTabTextSize="14sp"
+        app:stl_distributeEvenly="true"
+        app:stl_dividerThickness="0dp"
+        app:stl_indicatorColor="@color/accent"
+        app:stl_indicatorThickness="3dp"
+        app:stl_underlineThickness="0dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_pager_tab" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ui_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        fresco:placeholderImage="@color/colorPrimary"
+        fresco:roundedCornerRadius="12dp"/>
+
+    <com.kirer.widget.image.round.RoundedImageView
+        android:id="@+id/user_center"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:src="@mipmap/ic_favorite_press"
+        app:riv_border_color="@color/primary"
+        app:riv_border_width="1dp"
+        app:riv_corner_radius="100dp"
+        app:riv_tile_mode="clamp" />
+
+
+    <include layout="@layout/view_toolbar"/>
+
+</RelativeLayout>
